@@ -1,0 +1,104 @@
+:root {
+  /* Paleta de colores suaves y relajantes */
+  --bg-color: #f5f7fa;
+  --card-bg: #ffffff;
+  --primary-text: #334155;
+  --secondary-text: #475569;
+  --accent: #6366f1;
+  --button-bg: var(--accent);
+  --button-text: #ffffff;
+  --border-radius: 8px;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: var(--secondary-text);
+}
+
+#productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.producto {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.producto h2 {
+  font-size: 1.25rem;
+  margin: 1rem;
+}
+
+.producto p {
+  flex-grow: 1;
+  margin: 0 1rem 1rem;
+  color: var(--secondary-text);
+}
+
+.producto a {
+  display: block;
+  text-align: center;
+  margin: 0 1rem 1rem;
+  padding: 0.75rem 0;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.producto a:hover {
+  background-color: #4f46e5;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--secondary-text);
+}
